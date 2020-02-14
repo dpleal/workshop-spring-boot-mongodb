@@ -34,5 +34,10 @@ public class UserService {
 	public User fromDTO(UserDTO objDto) {
 		return new User(objDto.getId(), objDto.getName(), objDto.getEmail());
 	}
+	
+	public void delete(String id) {
+		findById(id); // atalho para primeiro procurar o  id e retornar o erro tratado caso o id seja inválido
+		repo.deleteById(id);
+	}
 
 }
