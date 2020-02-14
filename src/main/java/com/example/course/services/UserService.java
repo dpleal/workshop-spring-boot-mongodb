@@ -39,5 +39,17 @@ public class UserService {
 		findById(id); // atalho para primeiro procurar o  id e retornar o erro tratado caso o id seja inválido
 		repo.deleteById(id);
 	}
+	
+	public User update(User obj) {
+		User newObj = findById(obj.getId());
+		updateData(newObj, obj);
+		return repo.save(newObj);
+	}
+
+	private void updateData(User newObj, User obj) {
+		newObj.setName(obj.getName());
+		newObj.setEmail(obj.getEmail());
+		
+	}
 
 }
