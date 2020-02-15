@@ -1,5 +1,7 @@
 package com.example.course.repository;
 
+import java.util.List;
+
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
@@ -7,6 +9,8 @@ import com.example.course.domain.Post;
 
 @Repository
 public interface PostRepository extends MongoRepository<Post, String> {
+	
+	List<Post> findByTitleContainingIgnoreCase(String text); // consulta completa montada pelo SpringBoot (ver material de apoio aula 349)
 	
 	
 
