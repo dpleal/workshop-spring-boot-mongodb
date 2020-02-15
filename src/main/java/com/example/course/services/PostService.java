@@ -24,7 +24,8 @@ public class PostService {
 	}
 	
 	public List<Post> findByTitle(String text){
-		return repo.findByTitleContainingIgnoreCase(text);
+		// return repo.findByTitleContainingIgnoreCase(text); chamada para a consulta feita pelo springboot
+		return repo.searchTitle(text); // chamada para o método personalizado criado
 	}
 	
 	
