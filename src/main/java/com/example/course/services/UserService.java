@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.example.course.domain.User;
 import com.example.course.dto.UserDTO;
 import com.example.course.repository.UserRepository;
+import com.example.course.resources.exception.ObjectNotFoundException;
 
 @Service
 public class UserService {

@@ -1,4 +1,4 @@
-package com.example.course.services;
+package com.example.course.resources.exception;
 
 public class ObjectNotFoundException extends RuntimeException {
 
